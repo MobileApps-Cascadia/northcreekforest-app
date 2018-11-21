@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">FONCF Photo-Points</string>
+
+    <string name = "appDescription"> The purpose of this app is to help monitor the lifecycle of plant life and stream quality</string>
+    <string name = "viewMore"> If you would like to view more information about the site please visit these links</string>
+    <string name="Donate">https://www.friendsnorthcreekforest.org/support--donate.html</string>
+
+    <string name="Home">https://www.friendsnorthcreekforest.org/</string>
+
     <string name="title_activity_contact">Contacts</string>
 </resources>
