@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">FONCF Photo-Points</string>
-
+    <string name="title_activity_contact">Contacts</string>
 </resources>
