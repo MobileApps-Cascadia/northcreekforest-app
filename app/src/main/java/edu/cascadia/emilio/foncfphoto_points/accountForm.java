@@ -3,6 +3,7 @@ package edu.cascadia.emilio.foncfphoto_points;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class accountForm extends AppCompatActivity {
@@ -17,10 +18,12 @@ public class accountForm extends AppCompatActivity {
         EditText last = (EditText) findViewById(R.id.ac_last);
         EditText email = (EditText) findViewById(R.id.ac_email);
         EditText pin = (EditText) findViewById(R.id.ac_pin);
+        Button button = (Button) findViewById(R.id.profile_button);
 
         first.setHintTextColor(Color.WHITE);
         last.setHintTextColor(Color.WHITE);
         email.setHintTextColor(Color.WHITE);
         pin.setHintTextColor(Color.WHITE);
+        button.setTextColor(Color.WHITE);
     }
 }

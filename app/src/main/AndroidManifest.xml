@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".accountForm"></activity>
+        <activity android:name=".accountForm" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/button_style_one" />
     </application>
 
 </manifest>
