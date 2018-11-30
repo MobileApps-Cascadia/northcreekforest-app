@@ -31,7 +31,7 @@ public class MainActivity extends FragmentActivity implements PlanetFragment.OnL
         getSupportFragmentManager()
                 .beginTransaction()
                 //Replace PlanetFragment with the new fragment you create. Figure out if a blank fragment would work.
-                .replace(R.id.PlantFragmentContainer, PlantInfo.newInstance(s.id))
+                .replace(R.id.PlantFragmentContainer, PlantInfo.newInstance(s.content, s.details, s.info))
                 .addToBackStack("back")
                 .commit();
     }
