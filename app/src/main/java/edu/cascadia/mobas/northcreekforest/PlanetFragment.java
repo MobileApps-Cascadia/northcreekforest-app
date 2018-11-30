@@ -1,4 +1,4 @@
-package edu.cascadia.emilio.foncfphoto_points;
+package edu.cascadia.mobas.northcreekforest;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,10 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-import edu.cascadia.emilio.foncfphoto_points.dummy.DummyContent;
-import edu.cascadia.emilio.foncfphoto_points.dummy.DummyContent.DummyItem;
-
-import java.util.List;
+import edu.cascadia.mobas.northcreekforest.dummy.DummyContent;
+import edu.cascadia.mobas.northcreekforest.dummy.DummyContent.DummyItem;
 
 /**
  * A fragment representing a list of Items.
