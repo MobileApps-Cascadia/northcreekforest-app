@@ -1,18 +1,10 @@
-package edu.cascadia.emilio.foncfphoto_points;
+package edu.cascadia.mobas.northcreekforest;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 
 
-import edu.cascadia.emilio.foncfphoto_points.dummy.DummyContent;
+import edu.cascadia.mobas.northcreekforest.dummy.DummyContent;
 
 public class MainActivity extends FragmentActivity implements PlanetFragment.OnListFragmentInteractionListener {
 
@@ -31,7 +23,7 @@ public class MainActivity extends FragmentActivity implements PlanetFragment.OnL
         getSupportFragmentManager()
                 .beginTransaction()
                 //Replace PlanetFragment with the new fragment you create. Figure out if a blank fragment would work.
-                .replace(R.id.PlantFragmentContainer, PlantInfo.newInstance(s.id))
+                .replace(R.id.PlantFragmentContainer, PlantInfo.newInstance(s.content, s.details, s.info))
                 .addToBackStack("back")
                 .commit();
     }
