@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/northcreekforest-app.iml" filepath="$PROJECT_DIR$/.idea/northcreekforest-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/northcreekforest-app.iml" filepath="$PROJECT_DIR$/northcreekforest-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/northcreekforest-app.iml" filepath="$PROJECT_DIR$/.idea/northcreekforest-app.iml" />
     </modules>
   </component>
 </project>

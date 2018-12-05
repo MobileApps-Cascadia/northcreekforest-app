@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="@string/home_nav" />
+        <item
+            android:id="@+id/nav_scan"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="@string/scan_nav" />
+        <item
+            android:id="@+id/nav_plants"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="@string/plant_nav" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="@string/about_nav" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="@string/contact_nav" />
+    </group>
+</menu>
