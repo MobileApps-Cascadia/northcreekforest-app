@@ -1,4 +1,4 @@
-package edu.cascadia.emilio.foncfphoto_points;
+package edu.cascadia.mobas.northcreekforest;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

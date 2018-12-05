@@ -1,4 +1,4 @@
-package edu.cascadia.emilio.foncfphoto_points;
+package edu.cascadia.mobas.northcreekforest;
 
 public interface DisplaySelectedScreen{
     public void displaySelectedScreen(int itemId);

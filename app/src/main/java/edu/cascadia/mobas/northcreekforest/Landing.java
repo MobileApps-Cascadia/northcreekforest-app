@@ -1,4 +1,5 @@
-package edu.cascadia.emilio.foncfphoto_points;
+package edu.cascadia.mobas.northcreekforest;
+
 
 import android.content.Context;
 import android.net.Uri;
@@ -9,8 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import edu.cascadia.mobas.northcreekforest.R;
+
 public class Landing extends Fragment {
-    private DisplaySelectedScreen listener;
+    private edu.cascadia.mobas.northcreekforest.DisplaySelectedScreen listener;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_landing, container, false);
@@ -29,7 +32,7 @@ public class Landing extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         try {
-            listener = (DisplaySelectedScreen) context;
+            listener = (edu.cascadia.mobas.northcreekforest.DisplaySelectedScreen) context;
         }catch (ClassCastException castException){
             // Activity is not implementing listener
         }

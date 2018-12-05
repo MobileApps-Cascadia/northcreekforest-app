@@ -1,4 +1,4 @@
-package edu.cascadia.emilio.foncfphoto_points;
+package edu.cascadia.mobas.northcreekforest;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -17,7 +17,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import edu.cascadia.emilio.foncfphoto_points.dummy.DummyContent;
+import edu.cascadia.mobas.northcreekforest.dummy.DummyContent;
 
 public class MainActivity extends AppCompatActivity implements
         DisplaySelectedScreen,
@@ -41,6 +41,11 @@ public class MainActivity extends AppCompatActivity implements
         navigationView.setNavigationItemSelectedListener(this);
 
         displaySelectedScreen(R.id.nav_home);
+
+//        getSupportFragmentManager()
+//            .beginTransaction()
+//            .add(R.id.content_frame, PlanetFragment.newInstance(1))
+//            .commit();
     }
 
     @Override
@@ -61,9 +66,13 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void onListFragmentInteraction(DummyContent.DummyItem id) {
-
-    }
+    public void onListFragmentInteraction(DummyContent.DummyItem s) {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.content_frame, PlantInfo.newInstance(s.content, s.details, s.info))
+                .addToBackStack("back")
+                .commit();
+        }
 
     @Override
     public void displaySelectedScreen(int itemId) {
