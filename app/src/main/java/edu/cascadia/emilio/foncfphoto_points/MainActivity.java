@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
             button = (Button) findViewById(R.id.accountForm);
 
-
             button.setTextColor(Color.WHITE);
 
             button.setOnClickListener(new View.OnClickListener() {
