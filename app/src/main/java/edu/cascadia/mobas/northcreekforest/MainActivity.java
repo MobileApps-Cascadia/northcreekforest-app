@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        displaySelectedScreen(R.id.nav_home);
+        displaySelectedScreen(R.id.nav_splash);
 
 //        getSupportFragmentManager()
 //            .beginTransaction()
@@ -96,6 +96,13 @@ public class MainActivity extends AppCompatActivity implements
                 break;
             case R.id.nav_contact:
                 fragment = new ContactActivity();
+                break;
+            case R.id.nav_splash:
+                fragment = new SplashFragment();
+                break;
+            case R.id.nav_create:
+                fragment = new accountForm();
+
         }
 
         //replacing the fragment
