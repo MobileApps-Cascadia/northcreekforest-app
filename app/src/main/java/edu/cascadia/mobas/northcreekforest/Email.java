@@ -1,4 +1,4 @@
-package edu.cascadia.emilio.foncfphoto_points;
+package edu.cascadia.mobas.northcreekforest;
 
 import android.content.Intent;
 import android.os.Bundle;

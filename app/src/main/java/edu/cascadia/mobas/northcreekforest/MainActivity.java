@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements
                 break;
             case R.id.nav_scan:
                 //fragment = new Scan();
+                startActivity(new Intent(MainActivity.this, BarcodeScanner.class));
                 break;
             case R.id.nav_plants:
                 fragment = new PlanetFragment();
