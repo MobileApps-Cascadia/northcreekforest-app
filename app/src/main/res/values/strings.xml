@@ -7,6 +7,12 @@
     <string name="Donate">https://www.friendsnorthcreekforest.org/support--donate.html</string>
     <string name="Home">https://www.friendsnorthcreekforest.org/</string>
 
+    //Scanner strings
+    <string name="take_barcode_picture">Take Barcode Picture</string>
+    <string name="scan_barcode">Scan Barcode</string>
+    <string name="open_camera">OPEN CAMERA</string>
+    <string name="send_email">SEND EMAIL</string>
+  
     //Nav Drawer Strings
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

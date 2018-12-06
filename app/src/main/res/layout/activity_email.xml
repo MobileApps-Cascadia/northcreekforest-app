@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Email">
+
+
+    <Button
+        android:id="@+id/btnSendEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inBody"
+        android:layout_centerHorizontal="true"
+        android:text="@string/send_email"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="397dp" />
+
+
+    <TextView
+        android:id="@+id/txtEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Email Address: "
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/inSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmailAddress"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Subject"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="287dp" />
+
+    <EditText
+        android:id="@+id/inBody"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/inSubject"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Body"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="232dp" />
+
+</android.support.constraint.ConstraintLayout>
