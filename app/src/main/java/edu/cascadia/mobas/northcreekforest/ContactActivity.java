@@ -1,3 +1,4 @@
+//Contact Fragment
 package edu.cascadia.mobas.northcreekforest;
 
 import android.app.AlertDialog;
@@ -25,12 +26,14 @@ public class ContactActivity extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.activity_contact, container, false);
 
+        //Listener for submit
         rootView.findViewById(R.id.btnOK).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                //Get subject and message
                 String sub = ((EditText)rootView.findViewById(R.id.txtSubject)).getText().toString();
                 String mess = ((EditText)rootView.findViewById(R.id.txtMessage)).getText().toString();
 
-
+                //Open email prompt with intent
                 Intent mail = new Intent(Intent.ACTION_SEND);
                 mail.putExtra(Intent.EXTRA_EMAIL,new String[]{"aaronakohler@gmail.com"});
                 mail.putExtra(Intent.EXTRA_SUBJECT, sub);
