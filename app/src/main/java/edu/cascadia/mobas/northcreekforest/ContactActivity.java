@@ -35,7 +35,7 @@ public class ContactActivity extends Fragment {
 
                 //Open email prompt with intent
                 Intent mail = new Intent(Intent.ACTION_SEND);
-                mail.putExtra(Intent.EXTRA_EMAIL,new String[]{"aaronakohler@gmail.com"});
+                mail.putExtra(Intent.EXTRA_EMAIL,new String[]{"testingfncf@gmail.com"});
                 mail.putExtra(Intent.EXTRA_SUBJECT, sub);
                 mail.putExtra(Intent.EXTRA_TEXT, mess);
                 mail.setType("message/rfc822");
