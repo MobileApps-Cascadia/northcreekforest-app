@@ -20,9 +20,9 @@ import android.widget.Button;
 import edu.cascadia.mobas.northcreekforest.dummy.DummyContent;
 
 public class MainActivity extends AppCompatActivity implements
-        DisplaySelectedScreen,
-        NavigationView.OnNavigationItemSelectedListener,
-        PlanetFragment.OnListFragmentInteractionListener{
+        DisplaySelectedScreen, //Interface
+        NavigationView.OnNavigationItemSelectedListener, // Nav listener for drawer
+        PlanetFragment.OnListFragmentInteractionListener{ // ListFragment listener for plant list
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +31,15 @@ public class MainActivity extends AppCompatActivity implements
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+        //Create nav drawer layout and add listener
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        //Create and set the nav view
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -48,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements
 //            .commit();
     }
 
+    //Override Back Press to close drawer if open
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -58,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
 
+    //Handle navigation selection events
     @Override
     public boolean onNavigationItemSelected(@NonNull  MenuItem menuItem) {
         menuItem.setChecked(true);
@@ -65,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements
         return true;
     }
 
+    //Handle list fragment events
     @Override
     public void onListFragmentInteraction(DummyContent.DummyItem s) {
         getSupportFragmentManager()
@@ -74,6 +80,8 @@ public class MainActivity extends AppCompatActivity implements
                 .commit();
         }
 
+    //Interface Method
+    //Sets creates fragment for selected nav item
     @Override
     public void displaySelectedScreen(int itemId) {
 

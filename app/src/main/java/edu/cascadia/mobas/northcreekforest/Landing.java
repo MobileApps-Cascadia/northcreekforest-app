@@ -1,3 +1,4 @@
+//Default home page once account is created
 package edu.cascadia.mobas.northcreekforest;
 
 
@@ -18,6 +19,7 @@ public class Landing extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_landing, container, false);
 
+        //Listener for scan button, takes you to scan fragment
         rootView.findViewById(R.id.btnScan).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,6 +30,7 @@ public class Landing extends Fragment {
         return rootView;
     }
 
+    //Interface allowing use of DisplaySelectedScreen to nav away from fragment without nav drawer
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);

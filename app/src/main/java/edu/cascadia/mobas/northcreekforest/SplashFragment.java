@@ -1,3 +1,4 @@
+//Splash fragment that links to account creation
 package edu.cascadia.mobas.northcreekforest;
 
 import android.content.Context;
@@ -11,12 +12,13 @@ import android.view.ViewGroup;
 
 
 public class SplashFragment extends Fragment {
-
+    //Required for interface
     private edu.cascadia.mobas.northcreekforest.DisplaySelectedScreen listener;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_splash, container, false);
 
+        //Set click listener for create profile
         rootView.findViewById(R.id.accountForm).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,6 +29,7 @@ public class SplashFragment extends Fragment {
         return rootView;
     }
 
+    //Interface allowing use of DisplaySelectedScreen to nav away from fragment without nav drawer
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);

@@ -1,3 +1,4 @@
+//This Fragment displays the About us information
 package edu.cascadia.mobas.northcreekforest;
 
 import android.app.Activity;
@@ -13,10 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class About extends Fragment {
-
-    private FragmentActivity mFrgAct;
-    private Intent mIntent;
-
 
     @Nullable
     @Override

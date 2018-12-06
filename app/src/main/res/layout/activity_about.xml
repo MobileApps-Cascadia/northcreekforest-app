@@ -6,6 +6,7 @@
     android:background="@color/colorPrimaryDark"
     tools:context="edu.cascadia.mobas.northcreekforest.About">
 
+    // Display about us information
     <TextView
         android:id="@+id/textView2"
         android:layout_height="wrap_content"
@@ -18,6 +19,7 @@
         android:textColor="@color/colorAccent"
         android:textSize="30sp" />
 
+    //Link to FNCF.org
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -28,6 +30,7 @@
         android:autoLink="web"
         android:text="@string/Home" />
 
+    //Link to FNCF donate
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"

@@ -1,3 +1,4 @@
+//This fragment displays the account creation form
 package edu.cascadia.mobas.northcreekforest;
 
 import android.content.Context;
@@ -18,12 +19,14 @@ import android.widget.EditText;
 
 
 public class accountForm extends Fragment {
+    //Required for interface
     private edu.cascadia.mobas.northcreekforest.DisplaySelectedScreen listener;
 
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.activity_account_form, container, false);
 
+        //On click for submit button takes you to home screen
         rootView.findViewById(R.id.profile_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +57,7 @@ public class accountForm extends Fragment {
         return rootView;
     }
 
+    //Interface allowing use of DisplaySelectedScreen to nav away from fragment without nav drawer
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
