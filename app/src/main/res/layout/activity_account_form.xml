@@ -7,15 +7,12 @@
     android:background="@drawable/northcreek_background"
     tools:context=".accountForm">
 
- <include
-     android:id="@+id/my_toolbar"
-     layout="@layout/toolbar" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="26dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="5dp"
         android:text="Create Profile"
         android:textColor="@android:color/white"
         android:textSize="18sp"
@@ -89,7 +86,7 @@
         android:id="@+id/profile_button"
         android:layout_width="230dp"
         android:layout_height="45dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/button_style_one"
         android:text="Submit"
@@ -104,6 +101,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="98dp" />
+        app:layout_constraintGuide_end="478dp" />
 
 </android.support.constraint.ConstraintLayout>
