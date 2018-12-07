@@ -1,13 +1,24 @@
 <resources>
     <string name="app_name">FONCF Photo-Points</string>
 
-    <string name = "appDescription"> The purpose of this app is to help monitor the lifecycle of plant life and stream quality</string>
-    <string name = "viewMore"> If you would like to view more information about the site please visit these links</string>
+    //About us Strings
+    <string name="appDescription"> The purpose of this app is to help monitor the lifecycle of plant life and stream quality</string>
+    <string name="viewMore"> If you would like to view more information about the site please visit these links</string>
     <string name="Donate">https://www.friendsnorthcreekforest.org/support--donate.html</string>
-
     <string name="Home">https://www.friendsnorthcreekforest.org/</string>
 
-    <string name="title_activity_contact">Contacts</string>
-
-    <string name="douglas_fir">Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem </string>
+    //Scanner strings
+    <string name="take_barcode_picture">Take Barcode Picture</string>
+    <string name="scan_barcode">Scan Barcode</string>
+    <string name="open_camera">OPEN CAMERA</string>
+    <string name="send_email">SEND EMAIL</string>
+  
+    //Nav Drawer Strings
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="home_nav">Home</string>
+    <string name="scan_nav">Scan</string>
+    <string name="plant_nav">Plants</string>
+    <string name="about_nav">About</string>
+    <string name="contact_nav">Contact</string>
 </resources>
