@@ -80,6 +80,7 @@ public class PlantInfo extends Fragment {
 
     @Override
     public void onDetach() {
+
         super.onDetach();
         //mListener = null;
     }
