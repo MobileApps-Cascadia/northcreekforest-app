@@ -17,12 +17,17 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+
+import java.sql.Clob;
+
 import edu.cascadia.mobas.northcreekforest.dummy.DummyContent;
 
 public class MainActivity extends AppCompatActivity implements
         DisplaySelectedScreen, //Interface
         NavigationView.OnNavigationItemSelectedListener, // Nav listener for drawer
         PlanetFragment.OnListFragmentInteractionListener{ // ListFragment listener for plant list
+
+    private static final String BACK_STACK_ROOT_TAG = "root_fragment";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.content_frame, PlantInfo.newInstance(s.content, s.details, s.info))
-                .addToBackStack("back")
+                .addToBackStack(BACK_STACK_ROOT_TAG)
                 .commit();
         }
 
@@ -114,7 +119,11 @@ public class MainActivity extends AppCompatActivity implements
 
         }
 
+        //Clear backstack   `
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.popBackStack(BACK_STACK_ROOT_TAG, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         //replacing the fragment
+
         if (fragment != null) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragment);
@@ -123,5 +132,7 @@ public class MainActivity extends AppCompatActivity implements
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
+
     }
 }

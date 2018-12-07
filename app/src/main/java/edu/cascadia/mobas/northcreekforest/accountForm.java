@@ -35,14 +35,14 @@ public class accountForm extends Fragment {
         });
 
         // Get the widget reference for XML layout
-        Toolbar my_toolbar = (Toolbar) rootView.findViewById(R.id.my_toolbar);
+        Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
         EditText first = (EditText) rootView.findViewById(R.id.ac_first);
         EditText last = (EditText) rootView.findViewById(R.id.ac_last);
         EditText email = (EditText) rootView.findViewById(R.id.ac_email);
         EditText pin = (EditText) rootView.findViewById(R.id.ac_pin);
         Button button = (Button) rootView.findViewById(R.id.profile_button);
 //
-//        setSupportActionBar(my_toolbar);
+//        setSupportActionBar(toolbar);
 //        //getSupportActionBar().setTitle("");
 //
 //        getSupportActionBar().setIcon(getDrawable(R.drawable.ic_launcher_xhdpi));
