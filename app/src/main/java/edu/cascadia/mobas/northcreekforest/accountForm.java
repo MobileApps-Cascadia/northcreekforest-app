@@ -57,7 +57,7 @@ public class accountForm extends Fragment {
         return rootView;
     }
 
-    //Interface allowing use of DisplaySelectedScreen to nav away from fragment without nav drawer
+    //Interface allowing use of DisplaySelectedScreen to nav away from fragment WITHOUT nav drawer
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);

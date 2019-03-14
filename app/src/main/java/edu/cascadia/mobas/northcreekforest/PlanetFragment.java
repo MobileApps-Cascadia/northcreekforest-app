@@ -19,7 +19,9 @@ import edu.cascadia.mobas.northcreekforest.dummy.DummyContent.DummyItem;
 public class PlanetFragment extends Fragment {
 
     private static final String ARG_COLUMN_COUNT = "column-count";
+    private static final String ARG_PLANT_ID = "plantId";
     private int mColumnCount = 1;
+    private int mPlantId = 0;
     private OnListFragmentInteractionListener mListener;
 
     /**
@@ -42,8 +44,11 @@ public class PlanetFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
+            mPlantId = getArguments().getInt(ARG_PLANT_ID);
         }
     }
 
@@ -61,8 +66,10 @@ public class PlanetFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyPlantsRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.setAdapter(new MyPlantsRecyclerViewAdapter(DummyContent.ITEMS, mListener, mPlantId));
         }
+
+
         return view;
     }
 
@@ -70,6 +77,8 @@ public class PlanetFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         getActivity().setTitle("Plant List");
+
+
     }
 
     @Override
