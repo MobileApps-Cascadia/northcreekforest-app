@@ -5,9 +5,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class PlantInfo extends Fragment {
+public class PlantInfo extends Fragment implements View.OnClickListener {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "content";
     private static final String ARG_PARAM2 = "details";
@@ -16,8 +17,7 @@ public class PlantInfo extends Fragment {
     private String mContent;
     private String mDetails;
     private String mInfo;
-
-    //private OnFragmentInteractionListener mListener;
+    private Button submitButton;
 
     public PlantInfo() {
         // Required empty public constructor
@@ -51,38 +51,28 @@ public class PlantInfo extends Fragment {
         TextView mySecondTextView = myView.findViewById(R.id.PlantContent);
         TextView myInfoView = myView.findViewById(R.id.PlantInfo);
 
+        submitButton = myView.findViewById(R.id.submit);
+        submitButton.setOnClickListener(this);
+
         myTextView.setText(mContent);
         mySecondTextView.setText(mDetails);
         myInfoView.setText(mInfo);
 
         return myView;
-
-//        TextView myPlantInfoView = myView.findViewById(R.id.PlantName);
-//        myTextView.setText(mContent);
     }
 
-//    public void onButtonPressed(Fragment f) {
-//        if (mListener != null) {
-//            mListener.onFragmentInteraction(f);
-//        }
-//    }
+    @Override
+    public void onClick(View v) {
 
-//    @Override
-//    public void onAttach(Context context) {
-//        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-//    }
+        getFragmentManager().beginTransaction()
+                .replace(R.id.content_frame, new ImageUpload())
+                .addToBackStack(null).commit();
+    }
 
     @Override
     public void onDetach() {
 
         super.onDetach();
-        //mListener = null;
     }
 
 //    public interface OnFragmentInteractionListener {
