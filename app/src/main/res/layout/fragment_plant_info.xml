@@ -55,4 +55,17 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".9" />
 
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="230dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/button_style_one"
+        android:text="upload plant data"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@android:color/white" />
+
 </android.support.constraint.ConstraintLayout>
