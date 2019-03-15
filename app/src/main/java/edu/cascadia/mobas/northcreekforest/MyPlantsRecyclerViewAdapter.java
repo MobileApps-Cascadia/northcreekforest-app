@@ -16,10 +16,12 @@ public class MyPlantsRecyclerViewAdapter extends RecyclerView.Adapter<MyPlantsRe
 
     private final List<DummyItem> mValues;
     private final PlanetFragment.OnListFragmentInteractionListener mListener;
+    private final Integer mPlantID;
 
-    public MyPlantsRecyclerViewAdapter(List<DummyItem> items, PlanetFragment.OnListFragmentInteractionListener listener) {
+    public MyPlantsRecyclerViewAdapter(List<DummyItem> items, PlanetFragment.OnListFragmentInteractionListener listener, Integer plantID) {
         mValues = items;
         mListener = listener;
+        mPlantID = plantID;
     }
 
     @Override
@@ -31,11 +33,15 @@ public class MyPlantsRecyclerViewAdapter extends RecyclerView.Adapter<MyPlantsRe
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
+        if(mPlantID > 0){
+            //Force the scanned plant to show up in every slot on the viewholder, this allows auto click later
+            position = mPlantID - 1;
+        }
         holder.mItem = mValues.get(position);
         holder.mIdView.setText(mValues.get(position).id);
         holder.mContentView.setText(mValues.get(position).content);
 
-        holder.mView.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (null != mListener) {
@@ -44,7 +50,14 @@ public class MyPlantsRecyclerViewAdapter extends RecyclerView.Adapter<MyPlantsRe
                     mListener.onListFragmentInteraction(holder.mItem);
                 }
             }
-        });
+
+        };
+        holder.mView.setOnClickListener(listener);
+
+        if(mPlantID > 0) {
+            //PlantID was passed so force a click
+            listener.onClick(holder.itemView);
+        }
     }
 
     @Override

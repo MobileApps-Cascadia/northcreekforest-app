@@ -51,14 +51,5 @@ public class Email extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
-        switch (v.getId()) {
-            case R.id.btnTakePicture:
-                startActivity(new Intent(Email.this, PictureBarcode.class));
-                break;
-            case R.id.btnScanBarcode:
-                startActivity(new Intent(Email.this, ScannedBarcode.class));
-                break;
-        }
-
     }
 }
