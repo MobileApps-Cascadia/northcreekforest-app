@@ -16,8 +16,9 @@ import com.google.zxing.integration.android.IntentResult;
 public class BarcodeScanner extends AppCompatActivity implements View.OnClickListener {
 
     Button btnTakePicture, btnScanBarcode;
-    final Integer starting_index_last4_URL = 53;
-    final Integer URL_length = 58;
+
+    final Integer starting_index_last4_URL = 53; //The index of the final "/" in the URL retrieved from QR Code
+    final Integer URL_length = 58; //The expected length of the URL retrieved from the QR Code
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +69,7 @@ public class BarcodeScanner extends AppCompatActivity implements View.OnClickLis
                     }
 
                     else
+                        //If this message appears then the QR Code is storing the URL in a different format or the URL may have changed
                         Toast.makeText(this, "Expected URL length:" + URL_length + ", Actual URL Length:" +result.getContents().length(), Toast.LENGTH_LONG).show();
                 }
                 break;
