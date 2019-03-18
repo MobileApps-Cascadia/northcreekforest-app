@@ -1,9 +1,7 @@
 package edu.cascadia.mobas.northcreekforest.db;
 
 
-import android.arch.lifecycle.LiveData;
-
-import android.provider.ContactsContract;
+import androidx.lifecycle.LiveData;
 
 import java.util.List;
 

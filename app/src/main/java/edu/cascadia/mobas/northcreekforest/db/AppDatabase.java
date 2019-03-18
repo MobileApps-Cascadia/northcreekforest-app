@@ -4,8 +4,6 @@ package edu.cascadia.mobas.northcreekforest.db;
 //import android.arch.persistence.db.SupportSQLiteDatabase;
 
 import android.content.Context;
-import android.os.AsyncTask;
-import android.support.annotation.NonNull;
 
 import androidx.room.Database;
 import androidx.room.Room;

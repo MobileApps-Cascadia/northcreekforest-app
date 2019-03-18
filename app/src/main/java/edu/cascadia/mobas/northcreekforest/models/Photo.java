@@ -6,9 +6,11 @@ import java.sql.Blob;
 
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "photos_table",
+@Entity(indices = {@Index("point_id")},
+        tableName = "photos_table",
         foreignKeys = @ForeignKey(entity = PhotoPoints.class,
         parentColumns = "id",
         childColumns = "point_id"))
@@ -19,9 +21,9 @@ public class Photo{
 
     private int point_id;
 
-    private Blob photos;
+    private String photos;
 
-    public Photo(Blob photos) {
+    public Photo(String photos) {
         this.photos = photos;
     }
 
@@ -31,17 +33,17 @@ public class Photo{
         this.id = id;
     }
 
-    public int getPlant_id() {
+    public int getPoint_id() {
         return point_id;
     }
 
-    public void setPlant_id(int point_id) { this.point_id = point_id; }
+    public void setPoint_id(int point_id) { this.point_id = point_id; }
 
-    public Blob getPhotos() {
+    public String getPhotos() {
         return photos;
     }
 
-    public void setPhotos(Blob photos) {
+    public void setPhotos(String photos) {
         this.photos = photos;
     }
 }

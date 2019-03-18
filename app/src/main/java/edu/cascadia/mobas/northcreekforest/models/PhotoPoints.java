@@ -9,13 +9,18 @@ import java.util.Date;
 
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverter;
+import androidx.room.TypeConverters;
 
-@Entity(tableName = "photoPoints_table",
+@Entity(indices = {@Index("user_id")},
+        tableName = "photoPoints_table",
         foreignKeys = @ForeignKey(entity = User.class,
         parentColumns = "id",
         childColumns =  "user_id"))
 public class PhotoPoints{
+
 
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -24,11 +29,11 @@ public class PhotoPoints{
 
     private String plant_name;
 
-    private Date date;
+    private String date;
 
-    private Text comments;
+    private String comments;
 
-    public PhotoPoints(String plant_name, Date date, Text comments) {
+    public PhotoPoints(String plant_name, String date, String comments) {
         this.plant_name = plant_name;
         this.date = date;
         this.comments = comments;
@@ -46,13 +51,22 @@ public class PhotoPoints{
 
     public void setPlant_name(String plant_name) { this.plant_name = plant_name; }
 
-    public Date getDate() { return date; }
+    public String getDate() {
+        return date;
+    }
 
-    public void setDate(Date date) { this.date = date; }
+    public void setDate(String date) {
+        this.date = date;
+    }
 
-    public Text getComments() { return comments; }
+    public String getComments() {
+        return comments;
+    }
 
-    public void setComments(Text comments) { this.comments = comments; }
+    public void setComments(String comments) {
+        this.comments = comments;
+    }
+
 
 
 
