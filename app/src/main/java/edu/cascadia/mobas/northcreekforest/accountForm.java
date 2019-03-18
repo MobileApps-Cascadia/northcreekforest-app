@@ -48,6 +48,8 @@ public class accountForm extends Fragment {
 //        getSupportActionBar().setIcon(getDrawable(R.drawable.ic_launcher_xhdpi));
 //        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+
+        // set hint text color to white
         first.setHintTextColor(Color.WHITE);
         last.setHintTextColor(Color.WHITE);
         email.setHintTextColor(Color.WHITE);
