@@ -1,8 +1,8 @@
 package edu.cascadia.mobas.northcreekforest;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.support.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.annotation.NonNull;
 
 public class UploadViewModel extends AndroidViewModel {
     //private <REPOSITORY> repository;
