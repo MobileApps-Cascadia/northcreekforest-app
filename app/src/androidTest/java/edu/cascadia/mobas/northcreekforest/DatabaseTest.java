@@ -1,7 +1,5 @@
 package edu.cascadia.mobas.northcreekforest;
 
-
-
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;
 import androidx.test.runner.AndroidJUnit4;
@@ -39,13 +37,11 @@ public class DatabaseTest {
         uDao  = aDB.userDao();
         Log.i(TAG, "create Db");
     }
-
     @After
     public void closeDb(){
         aDB.close();
         Log.i(TAG, "closeDb");
     }
-
     @Test
     public void createAndRetrieveUsers(){
         uDao.addAll(SampleData.getUsers());
@@ -53,7 +49,6 @@ public class DatabaseTest {
         Log.i(TAG, "createAndRetrieveUsers"+ count);
         assertEquals(SampleData.getUsers().size(), count);
     }
-
     @Test
     public void compareStrings(){
         uDao.addAll(SampleData.getUsers());
@@ -61,7 +56,5 @@ public class DatabaseTest {
         User fromDb = uDao.getUser(1);
         assertEquals(Original.getUser_Name(), fromDb.getUser_Name());
         assertEquals(1, fromDb.getId());
-
     }
-
 }

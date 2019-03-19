@@ -15,9 +15,7 @@ import edu.cascadia.mobas.northcreekforest.models.Photo;
 import edu.cascadia.mobas.northcreekforest.models.PhotoPoints;
 import edu.cascadia.mobas.northcreekforest.models.User;
 
-
 public class AppRepository {
-
 
    private PhotoDao      photoDao;
    private PhotoPointDao photoPointDao;
@@ -26,28 +24,19 @@ public class AppRepository {
    private LiveData<List<PhotoPoints>> allPhotoPoints;
    private LiveData<List<User>>        allUsers;
 
-
-
     public AppRepository(Application application){
         AppDatabase database = AppDatabase.getInstance(application);
         photoDao        = database.photoDao();
         photoPointDao   = database.photoPointDao();
         userDao         = database.userDao();
-       // allPhotos       = photoDao.getAllPhotos();
-       // allPhotoPoints  = photoPointDao.getAllPhotoPoints();
-        //allUsers        = userDao.getAllUsers();
-
     }
-
     //these method are the API that the repository exposes to the out side. ViewModel calls them
     // the abstraction layer
-
     public void insert(Photo photo) {new InsertPhotoAsyncTask(photoDao).execute(photo);}
 
     public void insert(PhotoPoints photoPoints) {new InsertPhotoPointAsyncTask(photoPointDao).execute(photoPoints);}
 
     public void insert(User user) {new InsertUserAsyncTask(userDao).execute(user);}
-
 
     //Room does ont allow database operation on the main thread so we use
     // async tasks to take care of this in a background thread
@@ -87,5 +76,4 @@ public class AppRepository {
             return null;
         }
     }
-
 }
