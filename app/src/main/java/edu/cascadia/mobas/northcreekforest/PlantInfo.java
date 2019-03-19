@@ -1,5 +1,6 @@
 package edu.cascadia.mobas.northcreekforest;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,6 +19,8 @@ public class PlantInfo extends Fragment implements View.OnClickListener {
     private String mDetails;
     private String mInfo;
     private Button submitButton;
+
+    private UploadViewModel uploadViewModel;
 
     public PlantInfo() {
         // Required empty public constructor
@@ -40,6 +43,8 @@ public class PlantInfo extends Fragment implements View.OnClickListener {
             mContent = getArguments().getString(ARG_PARAM1);
             mDetails = getArguments().getString(ARG_PARAM2);
             mInfo = getArguments().getString(ARG_PARAM3);
+
+            uploadViewModel = ViewModelProviders.of(this).get(UploadViewModel.class);
         }
     }
 
