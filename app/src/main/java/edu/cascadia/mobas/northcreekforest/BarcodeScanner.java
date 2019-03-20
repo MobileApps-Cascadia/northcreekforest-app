@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+import java.util.Date;
+
 public class BarcodeScanner extends AppCompatActivity implements View.OnClickListener {
 
     Button btnTakePicture, btnScanBarcode;
@@ -20,11 +22,13 @@ public class BarcodeScanner extends AppCompatActivity implements View.OnClickLis
     final Integer starting_index_last4_URL = 53; //The index of the final "/" in the URL retrieved from QR Code
     final Integer URL_length = 58; //The expected length of the URL retrieved from the QR Code
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_barcode_scanner);
         initViews();
+
     }
 
     private void initViews() {
