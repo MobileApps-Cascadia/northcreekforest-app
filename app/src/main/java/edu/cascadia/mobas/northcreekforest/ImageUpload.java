@@ -11,15 +11,11 @@ import android.widget.ImageView;
 
 public class ImageUpload extends Fragment {
 
-
-    ImageView StreamImage;
-
     private static final int PICKFILE_RESULT_CODE = 1;
 
     public ImageUpload() {
         // Required empty public constructor
     }
-
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -28,5 +24,4 @@ public class ImageUpload extends Fragment {
 
        return view;
     }
-
 }
