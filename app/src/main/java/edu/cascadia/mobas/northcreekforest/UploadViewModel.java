@@ -3,8 +3,8 @@ package edu.cascadia.mobas.northcreekforest;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.media.Image;
-import android.support.annotation.NonNull;
 import java.sql.Blob;
+import androidx.annotation.NonNull;
 
 public class UploadViewModel extends AndroidViewModel {
     //private <AppRepository> repository;
