@@ -54,6 +54,7 @@ public class accountForm extends Fragment {
         pin.setHintTextColor(Color.WHITE);
         button.setTextColor(Color.WHITE);
 
+
         return rootView;
     }
 

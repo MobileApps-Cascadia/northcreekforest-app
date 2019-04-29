@@ -1,7 +1,7 @@
 package edu.cascadia.mobas.northcreekforest;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
+import androidx.lifecycle.AndroidViewModel;
 import android.media.Image;
 import java.sql.Blob;
 import androidx.annotation.NonNull;

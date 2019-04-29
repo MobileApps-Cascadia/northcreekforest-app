@@ -9,14 +9,16 @@ import androidx.fragment.app.Fragment;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
-import android.view.Menu;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.MenuItem;
-import android.widget.Button;
+
 import com.google.zxing.integration.android.IntentIntegrator;
-import java.sql.Clob;
+
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 import edu.cascadia.mobas.northcreekforest.dummy.DummyContent;
 
 public class MainActivity extends AppCompatActivity implements
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements
         PlanetFragment.OnListFragmentInteractionListener{ // ListFragment listener for plant list
 
     private static final String BACK_STACK_ROOT_TAG = "root_fragment";
+    private activity_account_formViewModel Mviewmodel;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements
         Intent my_intent = getIntent();
         String scannedPlant = my_intent.getStringExtra("ScannedPlant");
 
+        initViewModel();
 
         if(scannedPlant != null) {
             //Activity created by BarcodeScanner
@@ -62,6 +67,12 @@ public class MainActivity extends AppCompatActivity implements
 //            .beginTransaction()
 //            .add(R.id.content_frame, PlanetFragment.newInstance(1))
 //            .commit();
+    }
+
+    private void initViewModel() {
+        Mviewmodel = ViewModelProviders.of(this)
+                .get(activity_account_formViewModel.class);
+
     }
 
     //Override Back Press to close drawer if open
