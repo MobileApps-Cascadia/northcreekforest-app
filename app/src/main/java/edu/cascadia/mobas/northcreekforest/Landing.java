@@ -16,6 +16,7 @@ public class Landing extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_landing, container, false);
 
+
         //Listener for scan button, takes you to scan fragment
         rootView.findViewById(R.id.btnScan).setOnClickListener(new View.OnClickListener() {
             @Override
