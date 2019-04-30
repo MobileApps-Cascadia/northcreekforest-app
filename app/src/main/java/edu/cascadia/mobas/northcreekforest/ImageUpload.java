@@ -61,12 +61,22 @@ public class ImageUpload extends Fragment{
 
 
         button.setOnClickListener(v -> {
+            Photo Value = new Photo("testingValue");
+            Value.setPoint_id(9);
 
-            addPhoto.addPhoto(new Photo(weather.toString()));
+          // addPhoto.addPhoto(Value);
 
-            listener.displaySelectedScreen(R.id.nav_scan);
+            if(weather == null
+                    || Filler == null
+                    || info == null){
+                return;
+            }
+                    else {
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.content_frame, new SplashFragment())
+                        .addToBackStack(null).commit();
 
-
+            }
         });
 
         if (view instanceof RecyclerView) {

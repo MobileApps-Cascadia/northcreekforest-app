@@ -11,17 +11,29 @@ import edu.cascadia.mobas.northcreekforest.db.AppDatabase;
 import edu.cascadia.mobas.northcreekforest.models.Photo;
 
 public class UploadViewModel extends AndroidViewModel {
+
     private AppDatabase appDatabase;
+
+    public AppRepository apprepo;
 
     public UploadViewModel(@NonNull Application application) {
         super(application);
 
+
+
         appDatabase = AppDatabase.getInstance(getApplication());
+
     }
 
+
+
     public void addPhoto(Photo photos){
+
         new addAsyncTask(appDatabase).execute(photos);
+
+
     }
+
 
 
     private static class addAsyncTask extends AsyncTask< Photo, Void, Void> {

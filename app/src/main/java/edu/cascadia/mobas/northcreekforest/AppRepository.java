@@ -26,6 +26,7 @@ public class AppRepository {
 
     public AppRepository(Application application){
         AppDatabase database = AppDatabase.getInstance(application);
+
         photoDao        = database.photoDao();
         photoPointDao   = database.photoPointDao();
         userDao         = database.userDao();
