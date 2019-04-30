@@ -3,27 +3,41 @@ package edu.cascadia.mobas.northcreekforest;
 import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import android.media.Image;
+import android.os.AsyncTask;
+
 import java.sql.Blob;
 import androidx.annotation.NonNull;
+import edu.cascadia.mobas.northcreekforest.db.AppDatabase;
+import edu.cascadia.mobas.northcreekforest.models.Photo;
 
 public class UploadViewModel extends AndroidViewModel {
-    //private <AppRepository> repository;
+    private AppDatabase appDatabase;
 
     public UploadViewModel(@NonNull Application application) {
         super(application);
 
-        //repository = new AppRepository(application);
+        appDatabase = AppDatabase.getInstance(getApplication());
     }
 
-    public void insert(Image image){
-        //repository.insert(image);
+    public void addPhoto(Photo photos){
+        new addAsyncTask(appDatabase).execute(photos);
     }
 
-    public void delete(Image image){
-        //repository.delete(image);
-    }
 
-    public void deletetest(Blob image){
+    private static class addAsyncTask extends AsyncTask< Photo, Void, Void> {
+
+        private AppDatabase db;
+
+        addAsyncTask(AppDatabase appDatabase){
+            db = appDatabase;
+        }
+
+
+        @Override
+        protected Void doInBackground(Photo... photos) {
+            db.photoDao().addPhoto(photos[0]);
+            return null;
+        }
 
     }
 }

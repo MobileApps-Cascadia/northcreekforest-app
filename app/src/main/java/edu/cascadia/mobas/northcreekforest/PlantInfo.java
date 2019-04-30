@@ -52,6 +52,7 @@ public class PlantInfo extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View myView = inflater.inflate(R.layout.fragment_plant_info, container, false);
+
         TextView myTextView = myView.findViewById(R.id.PlantName);
         TextView mySecondTextView = myView.findViewById(R.id.PlantContent);
         TextView myInfoView = myView.findViewById(R.id.PlantInfo);

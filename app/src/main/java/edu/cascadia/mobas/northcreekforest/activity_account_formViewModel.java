@@ -22,6 +22,7 @@ public class activity_account_formViewModel extends AndroidViewModel{
     public void addUser(User user){
         new addAsyncTask(appDatabase).execute(user);
     }
+
     private static class addAsyncTask extends AsyncTask<User, Void, Void> {
 
         private AppDatabase db;
