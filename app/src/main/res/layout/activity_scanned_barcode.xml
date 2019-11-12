@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- TODO: Remove redundant layout properties -->
+<!-- TODO: Implement missing constraints -->
+<!-- TODO: Unresolved class in tool:context -->
+<!-- TODO: Standardize View id names -->
+<!-- TODO: Use theme for colors -->
+<!-- TODO: Update to reflect package refactor -->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -22,7 +30,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:text="No Barcode Detected"
+        android:text="@string/no_barcode_detected"
         android:textColor="@android:color/white"
         android:visibility="invisible"
         android:textSize="20sp" />
@@ -33,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="ADD CONTENT IN THE MAIL"
+        android:text="@string/add_content_via_email"
         android:visibility="invisible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

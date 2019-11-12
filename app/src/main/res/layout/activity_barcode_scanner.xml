@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- TODO: Standardize View id names -->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -16,7 +19,7 @@
         android:layout_marginStart="133dp"
         android:layout_marginEnd="111dp"
         android:layout_marginBottom="159dp"
-        android:text="Take a picture"
+        android:text="@string/take_a_picture"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -31,7 +34,7 @@
         android:layout_marginTop="151dp"
         android:layout_marginEnd="94dp"
         android:layout_marginBottom="90dp"
-        android:text="Open Scanner"
+        android:text="@string/open_scanner"
         app:layout_constraintBottom_toTopOf="@+id/btnTakePicture"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

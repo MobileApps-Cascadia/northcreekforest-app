@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- TODO: Constraints check on views in this ConstraintLayout -->
+<!-- TODO: Determine how the IDE deals with package/module names that are in xml/quotes -->
+<!-- TODO: Standardize View id names -->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +12,7 @@
     android:background="@drawable/northcreek_background"
     tools:context="edu.cascadia.mobas.northcreekforest.About">
 
-    // Display about us information
+    <!-- Display about us information -->
 
     <TextView
         android:id="@+id/textView2"
@@ -27,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    //Link to FNCF.org
+    <!-- Link to FNCF.org -->
 
     <TextView
         android:id="@+id/textView3"
@@ -44,8 +49,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    //Link to FNCF donate
+    <!-- Link to FNCF donate -->
 
+    <!-- fix unconstrained TextView below -->
     <TextView
         android:id="@+id/textView4"
         android:layout_width="294dp"

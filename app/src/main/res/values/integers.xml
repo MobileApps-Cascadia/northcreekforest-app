@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    //QR Scanner Integers
+    <!-- QR Scanner Integers -->
     <integer name="starting_index_last4_URL">53</integer>
     <integer name="URL_length">58</integer>
 </resources>

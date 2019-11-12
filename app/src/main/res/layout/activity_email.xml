@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- TODO: Fix missing constraints on views in ConstraintLayout -->
+<!-- TODO: Standardize View id names -->
+<!-- TODO: Determine how the IDE deals with package/module names that are in xml/quotes -->
+<!-- TODO: Consider refactor of descriptive names of Views -->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -23,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:text="Email Address: "
+        android:text="@string/email_address"
         android:textStyle="bold" />
 
     <EditText
@@ -33,7 +39,7 @@
         android:layout_below="@+id/txtEmailAddress"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:hint="Subject"
+        android:hint="@string/subject"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="287dp" />
 
@@ -44,7 +50,7 @@
         android:layout_below="@+id/inSubject"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:hint="Body"
+        android:hint="@string/hint_email_body"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="232dp" />
 

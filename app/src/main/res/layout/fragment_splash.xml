@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- TODO: Standardize View id names -->
+<!-- TODO: Use theme for colors -->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,14 +11,15 @@
     tools:context=".SplashFragment"
     android:background="@drawable/landing_background_text_fish">
 
-    //Button nav to Create Profile
+    <!-- Button nav to Create Profile -->
+
     <Button
         android:id="@+id/accountForm"
         android:layout_width="230dp"
         android:layout_height="45dp"
         android:layout_marginBottom="48dp"
         android:background="@drawable/button_style_one"
-        android:text="create profile"
+        android:text="@string/create_profile"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

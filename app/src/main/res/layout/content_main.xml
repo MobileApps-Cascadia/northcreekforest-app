@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- TODO: Investigate app:layout_behavior use here (string resource is missing)-->
+<!-- TODO: Consider formally standardizing layout types -->
+<!-- TODO: Standardize View id names -->
+<!-- TODO: Use theme for colors -->
+<!-- TODO: Update to reflect package refactor -->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,6 +18,6 @@
         <FrameLayout
             android:id="@+id/content_frame"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></FrameLayout>
+            android:layout_height="match_parent" />
 
 </RelativeLayout>
