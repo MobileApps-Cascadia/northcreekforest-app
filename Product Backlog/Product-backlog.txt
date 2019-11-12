@@ -1,0 +1,19 @@
+Features
+--------
+
+- Create glossary that will hold all plant details
+- Create a plant details page
+- Implement scanner feature that will redirect you to the correct plant or creek details page.
+- Create a register page (should not be shown when user is already registered)
+- Add mapview of photo-points and your own location.
+- Create "Upload pictures" page. This will contain:
+-- Additional information on what to focus on when taking pictures.
+-- The ability to take pictures
+-- The ability to save pictures, date and time, and location to the data-base 'queue' for an upload at a later stage (direct or when Wi-Fi is available).
+
+Optimizations
+-------------
+
+- Change app to be a single-activity-app by using fragments instead of views.
+- Change database model
+- Change the folder directory to have relevant information in the right packages (network, data, model, ui, ...)
