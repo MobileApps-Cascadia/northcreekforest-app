@@ -1,19 +1,12 @@
-Features
---------
-
-- Create glossary that will hold all plant details
-- Create a plant details page
-- Implement scanner feature that will redirect you to the correct plant or creek details page.
-- Create a register page (should not be shown when user is already registered)
-- Add mapview of photo-points and your own location.
-- Create "Upload pictures" page. This will contain:
--- Additional information on what to focus on when taking pictures.
--- The ability to take pictures
--- The ability to save pictures, date and time, and location to the data-base 'queue' for an upload at a later stage (direct or when Wi-Fi is available).
-
-Optimizations
--------------
-
-- Change app to be a single-activity-app by using fragments instead of views.
-- Change database model
-- Change the folder directory to have relevant information in the right packages (network, data, model, ui, ...)
+* Scanning the QR-code of a PhotoPoint and take you to the details of that PhotoPoint
+* Uploading the following PhotoPoint information:
+	* Date and time the picture was taken
+	* Coordinates of the user’s location at the time the picture was taken
+	* Pictures
+	* Information entered about the PhotoPoint (e.g.: depth and width of the creek)
+* Registering users and creating an account with Friends of NorthCreek Forest.
+* Delaying the upload of the PhotoPoint information to the server (e.g.: only when connected to Wi-Fi)
+* Displaying a history of PhotoPoint contributions
+* Displaying a map that shows the current location of the user, and the location of the PhotoPoints
+* Displaying a list with PhotoPoints that the user can browse through
+* Pushing notifications to the user
