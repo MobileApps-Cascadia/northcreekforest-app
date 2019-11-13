@@ -16,3 +16,7 @@ David Bain - Friends of North Creek Forest
 * James takes a picture of a nearby plant to help catalogue it for the database.
 * James uploads a previously taken picture of a plant he found interesting.
 * Grace uploads a photo to a citizen science project and sees a photo history made of select images of the same plant taken by her.
+
+### Coding Conventions
+* The [Kotlin style guide](https://developer.android.com/kotlin/style-guide)
+* The [Android Development style guide](https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md)
