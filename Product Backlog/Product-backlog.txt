@@ -1,3 +1,4 @@
+HIGH PRIORITY
 * Scanning the QR-code of a PhotoPoint and take you to the details of that PhotoPoint
 * Uploading the following PhotoPoint information:
 	* Date and time the picture was taken
@@ -5,8 +6,12 @@
 	* Pictures
 	* Information entered about the PhotoPoint (e.g.: depth and width of the creek)
 * Registering users and creating an account with Friends of NorthCreek Forest.
-* Delaying the upload of the PhotoPoint information to the server (e.g.: only when connected to Wi-Fi)
-* Displaying a history of PhotoPoint contributions
 * Displaying a map that shows the current location of the user, and the location of the PhotoPoints
+
+MEDIUM PRIORITY
+* Delaying the upload of the PhotoPoint information to the server (e.g.: only when connected to Wi-Fi)
+
+LOW PRIORITY
 * Displaying a list with PhotoPoints that the user can browse through
 * Pushing notifications to the user
+* Displaying a history of PhotoPoint contributions
